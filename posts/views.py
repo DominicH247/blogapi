@@ -27,7 +27,7 @@ from .models import Post
 
 class PostViewSet(viewsets.ModelViewSet):
 	"""provides both list view and detail view"""
-	permission_classes = (IsAuthorOrReadOnly)
+	permission_classes = (IsAuthorOrReadOnly,)
 	queryset = Post.objects.all()
 	serializer_class = PostSerializer
 
